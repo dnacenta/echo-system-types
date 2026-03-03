@@ -4,6 +4,8 @@
 //! It contains no logic — just structs, enums, and trait-adjacent types that form
 //! the contract between the orchestrator and its plugins.
 
+pub mod llm;
+
 use serde::{Deserialize, Serialize};
 use std::fmt;
 
