@@ -5,6 +5,7 @@
 //! the contract between the orchestrator and its plugins.
 
 pub mod llm;
+pub mod monitoring;
 
 use serde::{Deserialize, Serialize};
 use std::fmt;
