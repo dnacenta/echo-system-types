@@ -200,6 +200,60 @@ pub struct OutcomeRecord {
 }
 
 // ---------------------------------------------------------------------------
+// Calibration types (praxis-echo domain)
+// ---------------------------------------------------------------------------
+
+/// Confidence level for a threshold recommendation.
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+pub enum Confidence {
+    Low,
+    Medium,
+    High,
+}
+
+/// A recommendation to adjust a document's thresholds.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ThresholdRecommendation {
+    pub document: String,
+    pub current_soft: usize,
+    pub current_hard: usize,
+    pub recommended_soft: Option<usize>,
+    pub recommended_hard: Option<usize>,
+    pub reason: String,
+    pub confidence: Confidence,
+    pub evidence_count: usize,
+}
+
+/// Summary of outcome data used in calibration.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct OutcomeSummary {
+    pub total: usize,
+    pub success_rate: f64,
+    /// (domain, count, success_rate)
+    pub domains: Vec<(String, usize, f64)>,
+}
+
+/// Result of a calibration analysis run.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct CalibrationReport {
+    pub generated_at: String,
+    pub recommendations: Vec<ThresholdRecommendation>,
+    pub sample_size: usize,
+    pub outcome_summary: OutcomeSummary,
+}
+
+/// A point-in-time snapshot of pipeline document counts.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct PipelineSnapshot {
+    pub timestamp: String,
+    pub learning: usize,
+    pub thoughts: usize,
+    pub curiosity: usize,
+    pub reflections: usize,
+    pub praxis: usize,
+}
+
+// ---------------------------------------------------------------------------
 // Traits
 // ---------------------------------------------------------------------------
 
