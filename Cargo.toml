@@ -1,5 +1,5 @@
 [package]
-name = "pulse-null-types"
+name = "echo-system-types"
 version = "0.4.0"
 edition = "2021"
 description = "Shared contract types for the pulse-null plugin ecosystem"
