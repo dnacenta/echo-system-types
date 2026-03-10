@@ -6,6 +6,8 @@
 
 pub mod llm;
 pub mod monitoring;
+pub mod plugin;
+pub mod tool;
 
 use serde::{Deserialize, Serialize};
 use std::fmt;
