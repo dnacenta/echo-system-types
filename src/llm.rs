@@ -1,7 +1,7 @@
 //! LLM interaction types — the shared contract for model-agnostic design.
 //!
 //! These types define the conversation model, content blocks, and provider trait
-//! that echo-system and its plugins use to interact with language models.
+//! that pulse-null and its plugins use to interact with language models.
 
 use std::future::Future;
 use std::pin::Pin;

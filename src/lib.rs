@@ -1,6 +1,6 @@
-//! Shared contract types for the echo-system plugin ecosystem.
+//! Shared contract types for the pulse-null plugin ecosystem.
 //!
-//! This crate defines the types that plugin crates and echo-system both depend on.
+//! This crate defines the types that plugin crates and pulse-null both depend on.
 //! It contains no logic — just structs, enums, and trait-adjacent types that form
 //! the contract between the orchestrator and its plugins.
 
@@ -41,7 +41,7 @@ pub struct PluginMeta {
 
 /// A setup prompt for the init wizard.
 ///
-/// Plugins return a list of these to tell echo-system what configuration
+/// Plugins return a list of these to tell pulse-null what configuration
 /// values they need during first-time setup.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SetupPrompt {

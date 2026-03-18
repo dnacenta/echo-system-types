@@ -1,4 +1,4 @@
-//! Plugin trait — the shared contract for echo-system plugins.
+//! Plugin trait — the shared contract for pulse-null plugins.
 //!
 //! Plugins are constructed via async factory functions, not through the trait.
 //! By the time a [`Plugin`] exists, it is fully initialized and ready for

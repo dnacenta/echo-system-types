@@ -1,4 +1,4 @@
-//! Shared monitoring types and traits for the echo-system plugin ecosystem.
+//! Shared monitoring types and traits for the pulse-null plugin ecosystem.
 //!
 //! This module defines the contract between pulse-null core and its monitoring
 //! plugins (praxis-echo, vigil-echo, pulse-echo). Core calls through trait
