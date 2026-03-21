@@ -3,8 +3,12 @@ name = "pulse-system-types"
 version = "0.5.0"
 edition = "2021"
 description = "Shared contract types for the pulse-null plugin ecosystem"
-license = "AGPL-3.0"
+license = "AGPL-3.0-only"
 repository = "https://github.com/dnacenta/pulse-null-types"
+keywords = ["ai", "entity", "plugin", "types", "llm"]
+categories = ["data-structures"]
+authors = ["dnacenta"]
+readme = "README.md"
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }
